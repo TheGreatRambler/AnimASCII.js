@@ -53,7 +53,7 @@ Create animascii instance and run an animation.
 src: "path/to/animation.txt"
 // or array
 src: [["_/\_____",
-	   "-00-----"],
+       "-00-----"],
       ["__/\____",
        "--00----"], 
       ["___/\___",
