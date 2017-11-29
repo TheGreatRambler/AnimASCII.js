@@ -28,7 +28,7 @@ Features
     	<!-- Do whatever you want here -->
         <div id="container"></div>
         <script>
-        	var display = new animascii({src: "animation.txt"}, function() {
+        	var animation = new animascii({src: "animation.txt", display: document.getElementById("container")}, function() {
             	console.log("finished!");
             });
         </script>
@@ -64,6 +64,20 @@ src: [["_/\_____",
        "-----00-"]]
 ```
 Either a string or array. If it is a string, it will be parsed as a path to an animation file. If it is an array, it will be parsed as a raw animation.
+
+#### repeat
+
+```javascript
+// default
+repeat: 1
+
+// infinite
+repeat: -1
+
+// repeat any number of times
+repeat: 42
+```
+Specifies amount of times to repeat animation.
 
 #### letter-padding
 
@@ -144,6 +158,15 @@ foreground-color: "purple"
 foreground-color: "#ffa100"
 ```
 Specify foreground color.
+
+### callback
+
+```javascript
+new animascii(options, function() {
+	console.log("Finished!");
+});
+```
+Function executed after animation has finished. If `options.repeat` is infinite, callback will never run.
 
 ## Acknowledgements
 
