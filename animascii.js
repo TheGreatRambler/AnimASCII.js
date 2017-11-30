@@ -107,7 +107,7 @@ function animascii(inputoptions, callback) {
                 draw(++n, data, numofframes);
             }, data.frametime[n]);
         } else {
-            if (options.repeat === -1 || this.iteration < options.repeat) {
+            if (options.repeat === -1 || that.iteration < options.repeat) {
                 that.iteration++;
                 draw(0, data, numofframes);
             } else {
