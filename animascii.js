@@ -83,7 +83,7 @@ function animascii(inputoptions, callback) {
 
     setDefaults();
 
-    this.this.asciiscreen = new ROT.Display({
+    this.asciiscreen = new ROT.Display({
             fontSize: options.font_size,
             bg: options.background_color,
             fg: options.foreground_color,
