@@ -5,7 +5,7 @@ ASCII art animation library in Javascript using Canvas
 
 Features
 
- * Animations are stored in text files
+ * Animations are stored in text files or as regular javascript arrays
  * Simple format
  * Uses canvas
  * Currently does not support color
