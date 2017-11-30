@@ -2,6 +2,7 @@ function animascii(inputoptions, callback) {
     var sourcearraybool = Array.isArray(inputoptions.src);
     var options = {};
     this.iteration = 0;
+    var that = this;
 
     function setDefaults() {
         if (typeof inputoptions.repeat === "undefined") {
@@ -83,7 +84,7 @@ function animascii(inputoptions, callback) {
 
     setDefaults();
 
-    this.asciiscreen = new ROT.Display({
+    that.asciiscreen = new ROT.Display({
             fontSize: options.font_size,
             bg: options.background_color,
             fg: options.foreground_color,
@@ -100,14 +101,14 @@ function animascii(inputoptions, callback) {
         if (n < numofframes) {
             var startval = n * height;
             for (let t = 0; t < height; t++) {
-                this.asciiscreen.drawText(0, 0, data.frames[startval + t], width);
+                that.asciiscreen.drawText(0, 0, data.frames[startval + t], width);
             }
             setTimeout(function() {
                 draw(++n, data, numofframes);
             }, data.frametime[n]);
         } else {
             if (options.repeat === -1 || this.iteration < options.repeat) {
-                this.iteration++;
+                that.iteration++;
                 draw(0, data, numofframes);
             } else {
                 callback();
