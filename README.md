@@ -74,7 +74,7 @@ src: [["_/\_____",
       ["_____/\_",
        "-----00-"]]
 ```
-Either a string or array. If it is a string, it will be parsed as a path to an animation file. Read about animation files [here](animation_file_format.md).If it is an array, it will be parsed as a raw animation.
+Either a string or array. If it is a string, it will be parsed as a path to an animation file. Read about animation files [here](animation_file_format.md). If it is an array, it will be parsed as a raw animation.
 
 #### delay
 
