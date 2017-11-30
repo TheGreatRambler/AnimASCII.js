@@ -79,14 +79,14 @@ repeat: 42
 ```
 Specifies amount of times to repeat animation.
 
-#### letter-padding
+#### letter_padding
 
 ```javascript
 // default
-letter-padding: 1
+letter_padding: 1
 
 // very small spacing
-letter-padding: 0
+letter_padding: 0
 
 // XXXX
 // XXXX
@@ -94,7 +94,7 @@ letter-padding: 0
 // XXXX
 
 // very large padding
-letter-padding: 4
+letter_padding: 4
 
 // X   X   X   X
 //
@@ -106,56 +106,56 @@ letter-padding: 4
 ```
 Use this option in order to either increase or decrease the padding between letters.
 
-#### font-family
+#### font_family
 
 ```javascript
 // default
-font-family: "monospace"
+font_family: "monospace"
 
 // can use system font or use your own
-font-family: "arial"
+font_family: "arial"
 ```
 Specify font family of resulting animation.
 
-#### font-size
+#### font_size
 
 ```javascript
 // default
-font-size: 25
+font_size: 25
 
 // small
-font-size: 10
+font_size: 10
 
 // big
-font-size: 100
+font_size: 100
 ```
 Specify font size in pixels.
 
-#### background-color
+#### background_color
 
 ```javascript
 // default
-background-color: "white"
+background_color: "white"
 
 // can accept named color...
-background-color: "green"
+background_color: "green"
 
 // or any css-valid color
-background-color: "#ffa100"
+background_color: "#ffa100"
 ```
 Specify background color.
 
-#### foreground-color
+#### foreground_color
 
 ```javascript
 // default
-foreground-color: "black"
+foreground_color: "black"
 
 // can accept named color...
-foreground-color: "purple"
+foreground_color: "purple"
 
 // or any css-valid color
-foreground-color: "#ffa100"
+foreground_color: "#ffa100"
 ```
 Specify foreground color.
 
