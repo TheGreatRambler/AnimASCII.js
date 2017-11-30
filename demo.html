@@ -1,7 +1,29 @@
 <html>
-  <head>
-  </head>
-<body>
-Hello World!
-</body>
+
+    <head>
+        <script src="animascii.js"></script>
+    </head>
+
+    <body>
+        <div id="container"></div>
+        <script>
+            new animascii({
+                    src: [
+                        ["0-----"],
+                        ["-0----"],
+                        ["--0---"],
+                        ["---0--"],
+                        ["----0-"],
+                        ["-----0"]
+                    ],
+                    display: document.getElementById("container"),
+                    repeat: -1,
+                    delay: 100,
+                    font_size: 50
+                }, function() {
+                    alert("Done!");
+                });
+        </script>
+    </body>
+
 </html>
