@@ -93,7 +93,7 @@ function animascii(inputoptions, callback) {
     ROT.Display.Rect.cache = true;
     inputoptions.display.innerHTML = asciiscreen.getContainer();
 
-    function draw(n, data) {
+    function draw(n, data, numofframes) {
         if (n < numofframes) {
             var startval = n * height;
             for (let t = 0; t < height; t++) {
@@ -142,13 +142,13 @@ function animascii(inputoptions, callback) {
                 var cornerx = 0;
                 var cornery = 0;
                 var numofframes = filedata.frames.length / height;
-                draw(0, filedata);
+                draw(0, filedata, numofframes);
             });
     } else {
         draw(0, {
                 widthheight: [inputoptions.src[0][0].length, inputoptions.src[0].length],
                 frametime: Array(inputoptions.src.length).fill(options.delay),
                 frames: [].concat.apply([], inputoptions.src)
-            })
+            }, inputoptions.src.length);
     }
 }
