@@ -91,7 +91,7 @@ function animascii(inputoptions, callback) {
             spacing: options.letter_padding
         });
     ROT.Display.Rect.cache = true;
-    options.display.innerHTML = asciiscreen.getContainer();
+    inputoptions.display.innerHTML = asciiscreen.getContainer();
 
     function draw(n, data) {
         if (n < numofframes) {
