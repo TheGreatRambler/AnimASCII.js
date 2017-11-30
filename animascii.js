@@ -25,9 +25,9 @@ function animascii(inputoptions, callback) {
             options.font_size = inputoptions.font_size;
         }
         if (typeof inputoptions.background_color === "undefined") {
-            options.background_color = inputoptions.background_color;
-        } else {
             options.background_color = "white";
+        } else {
+            options.background_color = inputoptions.background_color;
         }
         if (typeof inputoptions.foreground_color === "undefined") {
             options.foreground_color = "black";
@@ -83,29 +83,32 @@ function animascii(inputoptions, callback) {
 
     setDefaults();
 
-    var asciiscreen = new ROT.Display({
+    this.this.asciiscreen = new ROT.Display({
             fontSize: options.font_size,
             bg: options.background_color,
             fg: options.foreground_color,
             fontFamily: options.font_family,
             spacing: options.letter_padding
         });
+        console.log(inputoptions, options);
     ROT.Display.Rect.cache = true;
-    inputoptions.display.innerHTML = asciiscreen.getContainer();
+    inputoptions.display.appendChild(this.asciiscreen.getContainer());
 
     function draw(n, data, numofframes) {
+        var width = data.widthheight[0];
+        var height = data.widthheight[1];
         if (n < numofframes) {
             var startval = n * height;
             for (let t = 0; t < height; t++) {
-                asciiscreen.drawText(cornerx, cornery + t, data.frames[startval + t], width);
+                this.asciiscreen.drawText(0, 0, data.frames[startval + t], width);
             }
             setTimeout(function() {
-                draw(n++, data);
+                draw(++n, data, numofframes);
             }, data.frametime[n]);
         } else {
             if (options.repeat === -1 || this.iteration < options.repeat) {
                 this.iteration++;
-                draw(0);
+                draw(0, data, numofframes);
             } else {
                 callback();
             }
@@ -132,10 +135,7 @@ function animascii(inputoptions, callback) {
                     name: "name"
                 }
             ], function(filedata) {
-
-                var width = filedata.widthheight[0];
-                var height = filedata.widthheight[1];
-                asciiscreen.setOptions({
+                this.asciiscreen.setOptions({
                         width: width,
                         height: height
                     });
@@ -145,6 +145,10 @@ function animascii(inputoptions, callback) {
                 draw(0, filedata, numofframes);
             });
     } else {
+        this.asciiscreen.setOptions({
+                        width: inputoptions.src[0][0].length,
+                        height: inputoptions.src[0].length
+                    });
         draw(0, {
                 widthheight: [inputoptions.src[0][0].length, inputoptions.src[0].length],
                 frametime: Array(inputoptions.src.length).fill(options.delay),
