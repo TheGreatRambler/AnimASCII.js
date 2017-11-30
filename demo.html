@@ -8,7 +8,7 @@
     <body>
         <div id="container"></div>
         <script>
-            new animascii({
+            var animation = new animascii({
                     src: [
                         ["0-----"],
                         ["-0----"],
@@ -20,7 +20,7 @@
                     display: document.getElementById("container"),
                     repeat: -1,
                     delay: 100,
-                    font_size: 50
+                    font_size: 100
                 }, function() {
                     alert("Done!");
                 });
