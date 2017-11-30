@@ -60,19 +60,23 @@ Pass in an element object in order to create a display.
 #### src
 
 ```javascript
-// Can be path...
+// Can be path to animation file...
 src: "path/to/animation.txt"
 // or array
-src: [["_/\_____",
+src: [["()______",
+       "00------"],
+      ["_()_____",
        "-00-----"],
-      ["__/\____",
+      ["__()____",
        "--00----"], 
-      ["___/\___",
+      ["___()___",
        "---00---"],
-      ["____/\__",
+      ["____()__",
        "----00--"],
-      ["_____/\_",
-       "-----00-"]]
+      ["_____()_",
+       "-----00-"],
+      ["______()",
+       "------00"]]
 ```
 Either a string or array. If it is a string, it will be parsed as a path to an animation file. Read about animation files [here](animation_file_format.md). If it is an array, it will be parsed as a raw animation.
 
