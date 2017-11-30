@@ -101,7 +101,7 @@ function animascii(inputoptions, callback) {
         if (n < numofframes) {
             var startval = n * height;
             for (let t = 0; t < height; t++) {
-                that.asciiscreen.drawText(0, 0, data.frames[startval + t], width);
+                that.asciiscreen.drawText(0, t, data.frames[startval + t], width);
             }
             setTimeout(function() {
                 draw(++n, data, numofframes);
