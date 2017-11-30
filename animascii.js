@@ -89,7 +89,8 @@ function animascii(inputoptions, callback) {
             bg: options.background_color,
             fg: options.foreground_color,
             fontFamily: options.font_family,
-            spacing: options.letter_padding
+            spacing: options.letter_padding,
+            forceSquareRatio: true
         });
     ROT.Display.Rect.cache = true;
     inputoptions.display.appendChild(this.asciiscreen.getContainer());
