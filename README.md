@@ -21,17 +21,17 @@ Features
 
 <html>
 	<head>
-    	<script src="js/ROT.js"></script>
-        <script src="js/animascii.js"></script>
+    		<script src="js/ROT.js"></script>
+        	<script src="js/animascii.js"></script>
 	</head>
 	<body>
     	<!-- Do whatever you want here -->
-        <div id="container"></div>
-        <script>
-        	var animation = new animascii({src: "animation.txt", display: document.getElementById("container")}, function() {
-            	console.log("finished!");
-            });
-        </script>
+        	<div id="container"></div>
+        	<script>
+        		var animation = new animascii({src: "animation.txt", display: document.getElementById("container")}, function() {
+            		console.log("finished!");
+            		});
+        	</script>
 	</body>
 </html>
 
