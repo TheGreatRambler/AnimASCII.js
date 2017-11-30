@@ -65,6 +65,6 @@ Charactors with significance include:
 _: Description and/or comments
 #: Width and height, first occurance of # will count as width, second occurance will count as height, all other occurances are ignored.
 ^: Length of each frame
-%: Frames of animascii
+%: Frames of animation
 ```
 Animation file is saved as a text file with `.txt` extension.
