@@ -1,5 +1,5 @@
 function animascii(inputoptions, callback) {
-    var sourcearraybool = Array.isArray(options.src);
+    var sourcearraybool = Array.isArray(inputoptions.src);
     var options = {};
     this.iteration = 0;
 
