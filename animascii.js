@@ -91,7 +91,6 @@ function animascii(inputoptions, callback) {
             fontFamily: options.font_family,
             spacing: options.letter_padding
         });
-        console.log(inputoptions, options);
     ROT.Display.Rect.cache = true;
     inputoptions.display.appendChild(this.asciiscreen.getContainer());
 
