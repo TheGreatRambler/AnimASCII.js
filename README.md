@@ -76,6 +76,17 @@ src: [["_/\_____",
 ```
 Either a string or array. If it is a string, it will be parsed as a path to an animation file. If it is an array, it will be parsed as a raw animation.
 
+#### delay
+
+```javascript
+// default
+delay: 200
+
+// delay of one second
+delay: 1000
+```
+Specifies delay between each frame of the animation.
+
 #### repeat
 
 ```javascript
