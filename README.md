@@ -1,5 +1,6 @@
 # AnimASCII
 
+![Logo][AnimASCII.gif]
 
 ASCII art animation library in Javascript using Canvas
 
