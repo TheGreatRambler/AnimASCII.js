@@ -58,18 +58,16 @@ function animascii(inputoptions, callback) {
         } else {
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("demo").innerHTML =
-                    this.responseText;
-
-
                 var lines = this.responseText.split('\n');
                 var data = {};
                 lines.forEach(function(result) {
-                    var linedata = find(method, ['symbol', result.charAt(0)]);
+                    var linedata = method.find(function(value) {
+                        return value.symbol === result.charAt(0);
+                    });
                     if (typeof linedata !== "undefined") {
-                        if (array.isArray(data[linedata.name]) === false) {
+                        if (Array.isArray(data[linedata.name]) === false) {
                             data[linedata.name] = [];
                         }
                         data[linedata.name].push(result.substr(1));
@@ -78,8 +76,8 @@ function animascii(inputoptions, callback) {
                 func(data);
             }
         };
-        xhttp.open("GET", options.src, true);
-        xhttp.send();
+        xmlhttp.open("GET", options.src, true);
+        xmlhttp.send();
     }
 
     setDefaults();
@@ -89,8 +87,7 @@ function animascii(inputoptions, callback) {
             bg: options.background_color,
             fg: options.foreground_color,
             fontFamily: options.font_family,
-            spacing: options.letter_padding,
-            forceSquareRatio: true
+            spacing: options.letter_padding
         });
     ROT.Display.Rect.cache = true;
     inputoptions.display.appendChild(this.asciiscreen.getContainer());
@@ -117,7 +114,7 @@ function animascii(inputoptions, callback) {
     }
 
     if (sourcearraybool === false) {
-        game_funcs.parsetextdoc({
+        parsetextdoc({
                 src: inputoptions.src
             }, [{
                     symbol: "#",
@@ -136,7 +133,9 @@ function animascii(inputoptions, callback) {
                     name: "name"
                 }
             ], function(filedata) {
-                this.asciiscreen.setOptions({
+                var width = filedata.widthheight[0];
+                var height = filedata.widthheight[1];
+                that.asciiscreen.setOptions({
                         width: width,
                         height: height
                     });
@@ -147,9 +146,9 @@ function animascii(inputoptions, callback) {
             });
     } else {
         this.asciiscreen.setOptions({
-                        width: inputoptions.src[0][0].length,
-                        height: inputoptions.src[0].length
-                    });
+                width: inputoptions.src[0][0].length,
+                height: inputoptions.src[0].length
+            });
         draw(0, {
                 widthheight: [inputoptions.src[0][0].length, inputoptions.src[0].length],
                 frametime: Array(inputoptions.src.length).fill(options.delay),
