@@ -8,10 +8,10 @@
 
     <body>
         <h1>Demos</h1>
-        <h2>Using raw animation with javascript array</h2>
+        <h2>Using raw animation with javascript arrays and using text file</h2>
         <div id="container1"></div>
-        <h2>Using animation file</h2>
         <div id="container2"></div>
+        <div id="container3"></div>
         <script>
             var animation1 = new animascii({
                     src: [
@@ -24,13 +24,22 @@
                     ],
                     display: document.getElementById("container1"),
                     repeat: -1,
-                    delay: 100,
+                    delay: 120,
                     font_size: 100
                 }, function() {
                     alert("Done!");
                 });
             var animation2 = new animascii({
                     src: "logo.txt",
+                    display: document.getElementById("container3"),
+                    repeat: -1,
+                    delay: 200,
+                    font_size: 20
+                }, function() {
+                    alert("Done!");
+                });
+            var animation3 = new animascii({
+                    src: "animation.txt",
                     display: document.getElementById("container1"),
                     repeat: -1,
                     delay: 200,
