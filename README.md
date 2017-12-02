@@ -146,7 +146,7 @@ font_family: "monospace"
 // can use system font or use your own
 font_family: "arial"
 ```
-Specify font family of resulting animation. Font must be loaded before you call AnimASCII, or the font will not be loaded.
+Specify font family of resulting animation. Font must be loaded before you call AnimASCII, or the font will not be loaded onto the display.
 
 #### font_size
 
