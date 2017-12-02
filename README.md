@@ -1,6 +1,6 @@
 # AnimASCII
 
-![Logo][https://TheGreatRambler.github.io/AnimASCII/AnimASCII.gif]
+![][https://TheGreatRambler.github.io/AnimASCII/AnimASCII.gif]
 
 ASCII art animation library in Javascript using Canvas
 
