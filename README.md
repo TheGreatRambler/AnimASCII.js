@@ -199,7 +199,7 @@ new animascii(options, function() {
 ```
 Function executed after animation has finished. If `options.repeat` is infinite, callback will never run.
 
-Dont forget to :star:
+Dont forget to :star: if you like!
 
 ## Acknowledgements
 
