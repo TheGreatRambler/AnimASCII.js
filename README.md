@@ -58,7 +58,7 @@ Create animascii instance and run an animation.
 display: document.getElementById("put-id-here")
 
 // or use jQuery!
-display: $("put-id-here")[0]
+display: $("#put-id-here")[0]
 ```
 Pass in an element object in order to create a display.
 
