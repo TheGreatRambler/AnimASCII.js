@@ -199,6 +199,8 @@ new animascii(options, function() {
 ```
 Function executed after animation has finished. If `options.repeat` is infinite, callback will never run.
 
+Dont forget to :star:
+
 ## Acknowledgements
 
  * Thanks to [ROT.js](https://github.com/ondras/rot.js/) for simple grid-based rendering
