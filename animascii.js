@@ -4,7 +4,7 @@
     } else if (typeof module === 'object' && module.exports) {
         module.exports = factory();
     } else {
-        root.returnExports = factory();
+        root[animascii] = factory();
     }
 }(typeof self !== 'undefined' ? self : this, function() {
     var animascii = function(inputoptions, callback) {
