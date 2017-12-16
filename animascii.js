@@ -4,7 +4,7 @@
     } else if (typeof module === 'object' && module.exports) {
         module.exports = factory(require("ROT"));
     } else {
-        root[animascii] = factory(root["ROT"]);
+        root["animascii"] = factory(root["ROT"]);
     }
 }(typeof self !== 'undefined' ? self : this, function(ROT) {
     var animascii = function(inputoptions, callback) {
