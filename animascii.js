@@ -1,12 +1,12 @@
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define([], factory);
+        define(["ROT"], factory);
     } else if (typeof module === 'object' && module.exports) {
-        module.exports = factory();
+        module.exports = factory(require("ROT"));
     } else {
-        root[animascii] = factory();
+        root[animascii] = factory(root["ROT"]);
     }
-}(typeof self !== 'undefined' ? self : this, function() {
+}(typeof self !== 'undefined' ? self : this, function(ROT) {
     var animascii = function(inputoptions, callback) {
         var sourcearraybool = Array.isArray(inputoptions.src);
         var options = {};
