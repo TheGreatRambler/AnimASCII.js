@@ -118,6 +118,7 @@
                 }
                 if (that.stopbool) {
                     that.asciiscreen.clear();
+                    options.repeat = 0;
                     if (callback) {
                         callback();
                     }
