@@ -12,7 +12,7 @@
         var options = {};
         this.iteration = 0;
         var that = this;
-        this.stop = false;
+        this.stopbool = false;
         
         function setDefaults() {
             if (typeof inputoptions.repeat === "undefined") {
@@ -103,7 +103,7 @@
         inputoptions.display.appendChild(this.asciiscreen.getContainer());
         
         this.stop = function() {
-            that.stop = true;
+            that.stopbool = true;
         }
 
         function draw(n, data, numofframes) {
@@ -116,7 +116,7 @@
                         that.asciiscreen.draw(t, g, data.frames[startval + g][t]);
                     }
                 }
-                if (that.stop) {
+                if (that.stopbool) {
                     that.asciiscreen.clear();
                     if (callback) {
                         callback();
