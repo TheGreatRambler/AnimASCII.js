@@ -197,7 +197,21 @@ new animascii(options, function() {
 	console.log("Finished!");
 });
 ```
-Function executed after animation has finished. If `options.repeat` is infinite, callback will never run.
+Function executed after animation has finished. If `options.repeat` is infinite, callback will never run unless you run `stop()`.
+
+### methods
+
+```javascript
+var animation = new animascii(options);
+```
+
+#### stop();
+
+```javascript
+animation.stop();
+```
+
+Stop the animation even if repeat is set to `-1` (infinite).
 
 Dont forget to :star: if you like!
 
