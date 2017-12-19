@@ -118,6 +118,9 @@
                 }
                 if (that.stop) {
                     that.asciiscreen.clear();
+                    if (callback) {
+                        callback();
+                    }
                 } else {
                     setTimeout(function() {
                         draw(++n, data, numofframes);
@@ -128,7 +131,9 @@
                     that.iteration++;
                     draw(0, data, numofframes);
                 } else {
-                    callback();
+                    if (callback) {
+                        callback();
+                    }
                 }
             }
         }
