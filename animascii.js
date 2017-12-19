@@ -12,7 +12,8 @@
         var options = {};
         this.iteration = 0;
         var that = this;
-
+        this.stop = false;
+        
         function setDefaults() {
             if (typeof inputoptions.repeat === "undefined") {
                 options.repeat = 1;
@@ -100,6 +101,10 @@
         });
         ROT.Display.Rect.cache = true;
         inputoptions.display.appendChild(this.asciiscreen.getContainer());
+        
+        this.stop = function() {
+            that.stop = true;
+        }
 
         function draw(n, data, numofframes) {
             var width = data.widthheight[0];
@@ -111,9 +116,13 @@
                         that.asciiscreen.draw(t, g, data.frames[startval + g][t]);
                     }
                 }
-                setTimeout(function() {
-                    draw(++n, data, numofframes);
-                }, data.frametime[n]);
+                if (that.stop) {
+                    that.asciiscreen.clear();
+                } else {
+                    setTimeout(function() {
+                        draw(++n, data, numofframes);
+                    }, data.frametime[n]);
+                }
             } else {
                 if (options.repeat === -1 || that.iteration < options.repeat) {
                     that.iteration++;
