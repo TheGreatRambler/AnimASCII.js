@@ -1,3 +1,4 @@
+// AnimASCII.js by TheGreatRambler https://github.com/TheGreatRambler/AnimASCII/
 (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
         define(["ROT"], factory);
