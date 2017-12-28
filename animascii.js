@@ -118,7 +118,6 @@
                     }
                 }
                 if (that.stopbool) {
-                    that.asciiscreen.clear();
                     if (callback) {
                         callback();
                     }
