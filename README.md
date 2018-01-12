@@ -34,7 +34,7 @@ Features
         	<div id="container"></div>
         	<script>
         		var animation = new animascii({src: "animation.txt", display: document.getElementById("container")}, function() {
-            		console.log("finished!");
+            			console.log("finished!");
             		});
         	</script>
 	</body>
