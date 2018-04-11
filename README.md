@@ -216,3 +216,7 @@ Dont forget to :star: if you like!
 ## Acknowledgements
 
  * Thanks to [ROT.js](https://github.com/ondras/rot.js/) for simple grid-based rendering
+ 
+## Note
+
+It has come to my attention that there is already a [haskell package](http://www.ariis.it/static/articles/animascii/page.html) with this name. I am sorry to have taken the name, but I will continue to market this as `animascii.js`, so there is no confusion.
