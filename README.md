@@ -2,7 +2,7 @@
 
 ![AnimASCII Logo](http://www.thegreatrambler.com/images/code-stuff/AnimASCII.gif)
 
-ASCII art animation library in Javascript using Canvas. Check out demo [here](http://thegreatrambler.com/code-demos/animascii/animasciidemo.html).
+ASCII art animation library in Javascript using Canvas. Check out demo [here](http://thegreatrambler.com/code-demos/animascii/index.html).
 
 Have you ever wanted to make ASCII art but it didnt seem interesting enough? Well, take ASCII art to the next level with AnimASCII. AnimASCII makes it possible to make videos and movies in javascript with only the canvas and a whole heck of a lot of letters!
 
